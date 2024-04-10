@@ -2,18 +2,20 @@ const input = document.querySelectorAll("input");
 const output = document.getElementById("output");
 
 
-// let sum = "";
+let sum = "";
+let value = output;
 
 input.forEach((button)=> {
     button.addEventListener("click", () => {
         let btnValue = button.value;
+        let outputValue = value;
         if(btnValue == "AC"){
             sum = "";
             output.value = sum;
-        }else if(btnValue == "A+" || btnValue == "4"){
+        }else if(btnValue == "A+"){
             sum = "4";
             output.value = sum;
-            // sum = "A+" = "4";
+            outputValue = sum;
         }else if(btnValue == "A"){
             sum = "3.75";
             output.value = sum;
@@ -54,16 +56,3 @@ input.forEach((button)=> {
         // console.log(btnValue)
     })
 })
-
-// console.log(input)
-
-// function calculation(){
-//     let sum = 0;
-    
-// }
-
-// for(let i = 0; i < input.length; i++){
-//     const inputValue = input.value;
-//     console.log(inputValue)
-// }
-
